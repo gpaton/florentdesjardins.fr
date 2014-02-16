@@ -140,13 +140,13 @@ class DefaultController
         ));
     }
 
-    // ----------------------------------------------------------------------------
-    //
-    // Fonction : contactThanksAction
-    //
-    // Affichage d'un remerciement après l'envoi d'un email de contact
-    //
-    // ----------------------------------------------------------------------------
+    /**
+     *
+     * Fonction : contactThanksAction
+     *
+     * Affichage d'un remerciement après l'envoi d'un email de contact
+     *
+     */
 
     public function contactThanksAction(Request $request, Application $app)
     {
