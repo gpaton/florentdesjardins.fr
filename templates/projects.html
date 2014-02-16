@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ title }} | {{ parent() }}{% endblock %}
+
+{% block parallax %}
+    <h2 class="page-title">Projets</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="sized">
+        <div class="mtl">
+            <h3 class="zeta">Mes projets</h3>
+            <p class="mts">Voici une liste de diverses ressources publiques hébérgées sur Github destinées à enrichir mon expérience, mes compétences ou améliorer ma productivité.</p>
+            <div class="mtm">
+                <p class="bold"><a href="https://github.com/dflorent/florentdesjardins.fr" class="link">florentdesjardins.fr</a></p>
+                <p>Code source de mon site internet. Utilisation du micro framework Silex.</p>
+            </div>
+            <div class="mtm">
+                <p class="bold"><a href="https://github.com/dflorent/unitcss" class="link">Unitcss</a></p>
+                <p>Framework personnel pour bien démarrer un projet. Utilisation de Sass & Compass.</p>
+            </div>
+            <div class="mtm">
+                <p class="bold"><a href="https://github.com/dflorent/mersonal" class="link">Mersonal</a></p>
+                <p>Routeur PHP qui peut servir de micro framework inspiré de Sinatra ou Silex. Utilisation de Composer, Namespace et Closures.</p>
+            </div>
+            <div class="mtm">
+                <p class="bold"><a href="https://github.com/dflorent/fordpress" class="link">Fordpress</a></p>
+                <p>Fordpress est un framework pour WordPress qui permet d'automatiser des opérations récurentes lors de la création de thèmes et organiser son projet.</p>
+            </div>
+        </div>
+        <div class="sized">
+            <div class="mtl">
+                <p class="zeta">Vous aimez ?</p>
+                <a class="btn" href="{{ url('contact') }}">Contactez-moi !</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

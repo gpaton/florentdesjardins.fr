@@ -1,0 +1,19 @@
+# parameters:
+    # debug: false
+    # locale: fr
+
+# database:
+    # driver: pdo_mysql
+    # host: localhost
+    # name: database_name
+    # user: root
+    # password: password
+    # charset: utf8
+
+# swiftmailer:
+    # host: smtp.gmail.com
+    # port: 465
+    # username: username@gmail.com
+    # password: password
+    # encryption: tls, ssl, or null
+    # auth_mode: plain, login, cram-md5, or null.

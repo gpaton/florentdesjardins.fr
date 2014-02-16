@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ title }} | {{ parent() }}{% endblock %}
+
+{% block parallax %}
+    <h2 class="page-title">Contact</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="sized">
+        <div class="mtl">
+            <h3 class="zeta">Contact</h3>
+            <p class="mts">Vous avez envie d'échanger avec moi, me rencontrer, me poser une question, me faire travailler ou vous souhaitez tout simplement me dire bonjour, envoyez moi un e-mail via le formulaire ci-dessous !</p>
+
+            <div class="mtl">
+                {{ form_start(form) }}
+                    {{ form_errors(form) }}
+
+                    <div>
+                        {{ form_label(form.name, 'Nom*') }}
+                        {{ form_widget(form.name) }}
+                        {{ form_errors(form.name) }}
+                    </div>
+
+                    <div class="mtm">
+                        {{ form_label(form.email, 'Email*') }}
+                        {{ form_widget(form.email) }}
+                        {{ form_errors(form.email) }}
+                    </div>
+
+                    <div class="mtm">
+                        {{ form_label(form.message, 'Message*') }}
+                        {{ form_widget(form.message) }}
+                        {{ form_errors(form.message) }}
+                    </div>
+
+                    <input class="btn" type="submit" name="submit" value="Envoyer" />
+                {{ form_end(form) }}
+            </div>
+        </div>
+        <div class="mtl">
+            <p class="zeta">Réseaux sociaux</p>
+            <ul class="ul-bordered">
+                <li><a class="link" href="https://twitter.com/dflorent">Twitter</a></li>
+                <li><a class="link" href="https://github.com/dflorent">Github</a></li>
+                <li><a class="link" href="http://www.linkedin.com/in/florentdesjardins">LinkedIn</a></li>
+                <li><a class="link" href="http://www.viadeo.com/fr/profile/florent.desjardins1">Viadeo</a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

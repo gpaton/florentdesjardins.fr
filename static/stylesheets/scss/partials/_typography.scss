@@ -1,0 +1,93 @@
+/*
+    =Typographie
+---------------------------------------------------------------------------- */
+
+body {
+    color: $base-color;
+    font-family: $base-font-family;
+}
+
+.mega, .alpha,
+.beta, .gamma,
+.epsilon, .zeta {
+    color: $heading-color;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+}
+
+.mega    { @include adjust-font-size-to($mega-font-size); }
+.alpha   { @include adjust-font-size-to($alpha-font-size); }
+.beta    { @include adjust-font-size-to($beta-font-size); }
+.gamma   { @include adjust-font-size-to($gamma-font-size); }
+.epsilon { @include adjust-font-size-to($epsilon-font-size); }
+.zeta    { @include adjust-font-size-to($zeta-font-size); }
+
+.link {
+    color: $link-color;
+    text-decoration: none;
+
+    @media (min-width: 961px) {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.ulist,
+.olist { padding-left: 1em; }
+.ulist { list-style-type: disc; }
+.olist { list-style: decimal; }
+
+.emphasis { font-style: italic; }
+.bold { font-weight: bold; }
+.small { font-size: 0.75em; }
+
+.superscript, .subscript {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+.superscript { top: -0.5em; }
+.subscript { bottom: -0.25em; }
+
+.typo {
+
+    h1, .mega    { @extend .mega; margin: rhythm(1, $mega-font-size) 0 0 0; }
+    h2, .alpha   { @extend .alpha; margin: rhythm(1, $alpha-font-size) 0 0 0; }
+    h3, .beta    { @extend .beta; margin: rhythm(1, $beta-font-size) 0 0 0; }
+    h4, .gamma   { @extend .gamma; margin: rhythm(1, $gamma-font-size) 0 0 0; }
+    h5, .epsilon { @extend .epsilon; margin: rhythm(1, $epsilon-font-size) 0 0 0; }
+    h6, .zeta    { @extend .zeta; margin: rhythm(1, $zeta-font-size) 0 0 0; }
+
+    a {
+        @extend .link;
+    }
+
+    i, em { @extend .emphasis; }
+    b, strong { @extend .bold; }
+
+    p, ul, ol {
+        margin: rhythm(1, $base-font-size) 0 0 0;
+    }
+
+    ul { @extend .ulist; }
+    ol { @extend .olist; }
+
+    p, ul, ol,
+    h1, h2, h3, h4, h5, h6 {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    li {
+        p, ul, ol {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    sup { @extend .superscript }
+    sub { @extend .subscript }
+}

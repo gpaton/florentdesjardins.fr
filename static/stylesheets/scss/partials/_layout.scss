@@ -1,0 +1,201 @@
+/*
+    =Layout
+---------------------------------------------------------------------------- */
+
+.green {
+    color: #2ecc71;
+}
+
+hr {
+    background-color: #ccc;
+    border: 0;
+    color: #ccc;
+    height: 1px;
+    margin: 2em auto;
+    padding: 0;
+}
+
+/*
+    =Liste avec bordure sans puce
+---------------------------------------------------------------------------- */
+
+.ul-bordered {
+
+    @media (min-width: 961px) {
+        & {
+            margin: 0 auto;
+            width: 45%;
+        }
+    }
+
+    li {
+        padding-top: 1em;
+        margin-top: 1em;
+        border-top: 1px solid $silver;
+
+        &:first-child {
+            border: none;
+        }
+    }
+}
+
+/*
+    =Bloc centré horizontalement
+---------------------------------------------------------------------------- */
+
+.sized {
+    margin: 0 auto;
+    text-align: center;
+    width: 280px;
+
+    @media (min-width: 569px) {
+        width: 420px;
+    }
+
+    @media (min-width: 961px) {
+        width: 940px;
+    }
+}
+
+/*
+    =Navigation
+---------------------------------------------------------------------------- */
+
+nav {
+    ul {
+        display: none;
+
+        li {
+            @include inline-block;
+            // border-left: 1px solid $cloud;
+            padding: 0 2em;
+            text-transform: uppercase;
+
+            &:first-child {
+                border: 0;
+            }
+
+            a {
+                color: $silver;
+                font-size: 12px;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover,
+                &.active {
+                    @extend .link;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 961px) {
+        ul {
+            display: block;
+        }
+
+        select {
+            display: none;
+        }
+    }
+}
+
+/*
+    =En-tête
+---------------------------------------------------------------------------- */
+
+.head {
+    text-align: center;
+}
+
+.head-title,
+.head-subtitle {
+    color: $asbestos;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.head-title {
+    @include inline-block;
+    border: 3px solid $silver;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+
+    span, a {
+        display: block;
+        padding: 25px 35px;
+    }
+
+    a {
+        color: $asbestos;
+        text-decoration: none;
+    }
+}
+
+.head-subtitle {
+    font-size: 11px;
+}
+
+/*
+    =Parallax
+---------------------------------------------------------------------------- */
+
+.parallax {
+    @include background-size(cover);
+    // background: url(../images/unsplash_529f1e8522a2a_1.jpg) no-repeat fixed center 25%;
+    background: url(../images/unsplash_524000a90aaad_1.jpg) no-repeat fixed center center;
+    height: 115px;
+    line-height: 115px;
+    text-align: center;
+
+    @media (min-width: 569px) {
+        height: 320px;
+        line-height: 320px;
+    }
+}
+
+.page-title {
+    @include inline-block;
+    // @include opacity(0.9);
+    border: 3px solid white;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    line-height: 1.6;
+    padding: 10px 40px;
+    text-transform: uppercase;
+}
+
+/*
+    =À propos
+---------------------------------------------------------------------------- */
+
+.about {
+    display: none;
+    background-color: $cloud;
+
+    @media (min-width: 961px) {
+        & {
+            display: block;
+        }
+    }
+}
+
+/*
+    =En savoir plus...
+---------------------------------------------------------------------------- */
+
+.more-about-me {
+    display: none;
+
+    @media (min-width: 961px) {
+        & {
+            display: block;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,24 @@
+/*
+    =Boutons
+---------------------------------------------------------------------------- */
+
+.btn {
+    @include inline-block();
+    @include border-radius(6px);
+    cursor: pointer;
+    background-color: #3498DB;
+    color: white;
+    font-size: $base-font-size;
+    line-height: 45px;
+    margin: 2em 0;
+    padding: 0 3em;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+
+    @media (min-width: 961px) {
+        &:hover {
+            background-color: #5DADE2;
+        }
+    }
+}

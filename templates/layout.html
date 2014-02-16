@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Florent Desjardins{% endblock %}</title>
+        {% if (description) %}
+            <meta name="description" content="{{ description }}">
+        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block extrameta %}{% endblock %}
+
+        <!-- <link rel="shortcut icon" href="{{ url('homepage') }}static/images/favicon.png"> -->
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ url('homepage') }}static/stylesheets/style.css">
+        {% endblock %}
+
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="sized">
+
+            <div class="head mtl">
+                <h1 class="head-title">{% if app.request.get('_route') != 'homepage' %}<a href="{{ url('homepage') }}">{% else %}<span>{% endif %}Florent Desjardins{% if app.request.get('_route') != 'homepage' %}</a>{% else %}</span>{% endif %}</h1>
+                <div class="head-subtitle">Développeur Web</div>
+            </div>
+
+            <nav class="mtl">
+                <ul>
+                    <li><a href="{{ url('homepage') }}" {% if app.request.get('_route') == 'homepage' %}class="active"{% endif %}>Profil</a></li>
+                    <li><a href="{{ url('skills') }}" {% if app.request.get('_route') == 'skills' %}class="active"{% endif %}>Compétences</a></li>
+                    <li><a href="{{ url('education') }}" {% if app.request.get('_route') == 'education' %}class="active"{% endif %}>Formation</a></li>
+                    <li><a href="{{ url('experience') }}" {% if app.request.get('_route') == 'experience' %}class="active"{% endif %}>Expérience</a></li>
+                    <li><a href="{{ url('projects') }}" {% if app.request.get('_route') == 'projects' %}class="active"{% endif %}>Projets</a></li>
+                    <li><a href="{{ url('contact') }}" {% if app.request.get('_route') == 'contact' %}class="active"{% endif %}>Contact</a></li>
+                </ul>
+
+                <select>
+                    <option value="{{ url('homepage') }}" {% if app.request.get('_route') == 'homepage' %}selected="selected"{% endif %}>Profil</option>
+                    <option value="{{ url('skills') }}" {% if app.request.get('_route') == 'skills' %}selected="selected"{% endif %}>Compétences</option>
+                    <option value="{{ url('education') }}" {% if app.request.get('_route') == 'education' %}selected="selected"{% endif %}>Formation</option>
+                    <option value="{{ url('experience') }}" {% if app.request.get('_route') == 'experience' %}selected="selected"{% endif %}>Expérience</option>
+                    <option value="{{ url('projects') }}" {% if app.request.get('_route') == 'projects' %}selected="selected"{% endif %}>Projets</option>
+                    <option value="{{ url('contact') }}" {% if app.request.get('_route') == 'contact' %}selected="selected"{% endif %}>Contact</option>
+                </select>
+            </nav>
+        </div>
+
+        <div class="parallax mtl ">
+            {% block parallax %}{% endblock %}
+        </div>
+
+        {% block content %}{% endblock %}
+
+        <div class="footer mtl mbl">
+            <div class="sized">
+                <p class="small">Copyright &copy; 2010 - {{ "now"|date("Y") }} Florent Desjardins.</p>
+            </div>
+        </div>
+
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script src="{{ url('homepage') }}static/javascripts/script.min.js"></script>
+        {% endblock %}
+
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-16540815-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>

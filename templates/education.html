@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ title }} | {{ parent() }}{% endblock %}
+
+{% block parallax %}
+    <h2 class="page-title">Formation</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="sized">
+        <div class="mtl">
+            <h3 class="zeta">Ma formation</h3>
+            <div class="mtm">
+                <p class="bold">Diplôme Universitaire de Technologie génie informatique</p>
+                <p class="mts">Université de Picardie Jules Verne</p>
+                <p class="emphasis mts">Amiens (80) &ndash; 2007 - 2010</p>
+            </div>
+            <div class="mtm">
+                <p class="bold">Titre de graphiste multimédia de niveau III</p>
+                <p class="mts">Vocation graphique (L'école multimédia)</p>
+                <p class="emphasis mts">Paris (75) &ndash; 2010</p>
+            </div>
+        </div>
+        <div class="sized">
+            <div class="mtl">
+                <p class="zeta">Quelques projets ?</p>
+                <a class="btn" href="{{ url('projects') }}">Voir mes projets !</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

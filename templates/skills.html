@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ title }} | {{ parent() }}{% endblock %}
+
+{% block parallax %}
+    <h2 class="page-title">Compétences</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="sized">
+        <div class="mtl">
+            <p class="zeta">Ce que je peux faire</p>
+            <ul class="ul-bordered">
+                <li>Design web</li>
+                <li>Intégration HTML & CSS</li>
+                <li>Gestionnaire de contenu (CMS)</li>
+                <li>Adaptabilité mobile (Responsive design)</li>
+                <li>Apprendre</li>
+            </ul>
+        </div>
+        <div class="mtl">
+            <p class="zeta">Avec quoi je peux travailler</p>
+            <ul class="ul-bordered">
+                <li>HTML</li>
+                <li>CSS / Sass / Compass</li>
+                <li>Javascript / jQuery</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>WordPress</li>
+                <li>Frameworks PHP</li>
+            </ul>
+        </div>
+        <div class="sized">
+            <div class="mtl">
+                <p class="zeta">Mes compétences vous intéressent ?</p>
+                <a class="btn" href="{{ url('contact') }}">Contactez-moi !</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+homepage:
+    title: Développeur web à Lyon
+    description: Bienvenue sur le site personnel de Florent Desjardins développeur web à Lyon.
+
+skills:
+    title: Compétences
+    description: Voici mes compétences en développement web.
+
+education:
+    title: Formation
+    description: Découvrez mon parcours de formation en développement web et en webdesign.
+
+experience:
+    title: Expériences
+    description: Retrouvez mon parcours professionnel au sein de différentes agences à Paris et à Lyon.
+
+projects:
+    title: Projets
+    description: Liste de ressources publiques hébergées sur Github.
+
+contact:
+    title: Contact
+    description: Contactez-moi pour tout échange, rencontre ou question !
+
+contact_thanks:
+    title: Contact

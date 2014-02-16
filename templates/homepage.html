@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ title }} | {{ parent() }}{% endblock %}
+
+{% block parallax %}
+    <h2 class="page-title">Profil</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="sized">
+        <div class="mtl">
+            <p class="zeta">Qui suis-je ?</p>
+            <div class="mts">
+                <p class="bold">Nom</p>
+                <p>Florent Desjardins</p>
+            </div>
+            <div class="mts">
+                <p class="bold">Poste actuel</p>
+                <p>Développeur web</p>
+            </div>
+            <div class="mts">
+                <p class="bold">Âge</p>
+                <p>{{ age }} ans</p>
+            </div>
+            <div class="mts">
+                <p class="bold">Localisation</p>
+                <p>Lyon, France</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="about mtl">
+        <p class="sized pal emphasis">Professionnelement je suis <strong class="bold">développeur web</strong>, anciennement webdesigner, diplômé
+        en informatique et en graphisme. <br> La plupart de ma journée je travail sur des
+        langages comme <strong class="bold">HTML</strong>, <strong class="bold">CSS</strong> (Sass), <strong class="bold">Javascript</strong> et <strong class="bold">PHP</strong>. Occasionnellement, <br> je suis
+        aussi formateur <strong class="bold">WordPress</strong>. Je suis passionné, sérieux, curieux, polyvalent et
+        soucieux du détail. Sans arrêt en train d'apprendre, j'aime aussi mettre les
+        mains dans un peu de Ruby ou de Python.</p>
+    </div>
+
+    <div class="sized">
+        <div class="mtl">
+            <p class="zeta">Mon objectif</p>
+            <p class="mts">Apprendre encore et toujours. Toutes les technologies m’intéressent. Je suis
+            partant <br> pour toutes nouvelles opportunités.</p>
+        </div>
+    </div>
+
+    <div class="more-about-me sized">
+        <div class="mtl">
+            <p class="zeta">En savoir plus...</p>
+            <p class="mts">Vous voulez en savoir plus sur moi ? Téléchargez mon curriculum-vitae !</p>
+            <a class="btn" href="{{ url('homepage') }}static/pdf/CV_Florent_Desjardins.pdf">Télécharger mon CV</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,6 @@
+.DS_STORE
+/var/cache/*
+/config/parameters.yml
+/var/logs/*
+/vendor/
+/composer.phar

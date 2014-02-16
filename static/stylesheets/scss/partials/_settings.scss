@@ -1,0 +1,28 @@
+/*
+    =Settings
+---------------------------------------------------------------------------- */
+
+$base-color                  : #95a5a6;
+$base-font-size              : 16px;
+$base-line-height            : 32px;
+$base-font-family            : "Open Sans", sans-serif;
+$heading-font-family         : "Open Sans", sans-serif;
+$heading-font-weight         : bold;
+$heading-color               : #34495e;
+$mega-font-size              : 36px;
+$alpha-font-size             : 30px;
+$beta-font-size              : 24px;
+$gamma-font-size             : 22px;
+$epsilon-font-size           : 20px;
+$zeta-font-size              : 18px;
+$link-color                  : #3498db;
+$experimental-support-for-svg: true;
+
+$cloud                       : #ecf0f1;
+$silver                      : #bdc3c7;
+$asbestos                    : #7f8c8d;
+$belize-hole                 : #2980b9;
+$wet-asphalt                 : #34495e;
+$pomegranate                 : #c0392b;
+
+@include establish-baseline;

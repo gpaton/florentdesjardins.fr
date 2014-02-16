@@ -1,0 +1,28 @@
+homepage:
+    pattern: /
+    controller: Florent\Controller\DefaultController::indexAction
+
+skills:
+    pattern: /competences
+    controller: Florent\Controller\DefaultController::skillsAction
+
+education:
+    pattern: /formation
+    controller: Florent\Controller\DefaultController::educationAction
+
+experience:
+    pattern: /experience
+    controller: Florent\Controller\DefaultController::experienceAction
+
+projects:
+    pattern: /projets
+    controller: Florent\Controller\DefaultController::projectsAction
+
+contact:
+    pattern: /contact
+    controller: Florent\Controller\DefaultController::contactAction
+    method: GET|POST
+
+contact_thanks:
+    pattern: /contact/merci
+    controller: Florent\Controller\DefaultController::contactThanksAction
