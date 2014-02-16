@@ -43,12 +43,12 @@ $app->register(new TwigServiceProvider(), array(
 
 // Swiftmailer options
 $app['swiftmailer.options'] = array(
-    'host' => $app['config']['parameters']['swiftmailer']['host'],
-    'port' => $app['config']['parameters']['swiftmailer']['port'],
-    'username' => $app['config']['parameters']['swiftmailer']['username'],
-    'password' => $app['config']['parameters']['swiftmailer']['password'],
-    'encryption' => $app['config']['parameters']['swiftmailer']['encryption'],
-    'auth_mode' => $app['config']['parameters']['swiftmailer']['auth_mode']
+    'host' => $app['config']['swiftmailer']['host'],
+    'port' => $app['config']['swiftmailer']['port'],
+    'username' => $app['config']['swiftmailer']['username'],
+    'password' => $app['config']['swiftmailer']['password'],
+    'encryption' => $app['config']['swiftmailer']['encryption'],
+    'auth_mode' => $app['config']['swiftmailer']['auth_mode']
 );
 
 // Routes
