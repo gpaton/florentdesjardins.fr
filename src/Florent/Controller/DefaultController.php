@@ -123,7 +123,7 @@ class DefaultController
             $message = \Swift_Message::newInstance()
                 ->setSubject('Formulaire de contact')
                 ->setFrom(array($data['email']))
-                ->setTo(array('florent.desjardins@gmail.com'))
+                ->setTo(array($app['config']['swiftmailer']['username']))
                 ->setBody($body);
 
             $app['mailer']->send($message);
