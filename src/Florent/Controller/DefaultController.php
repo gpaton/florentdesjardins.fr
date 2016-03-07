@@ -20,7 +20,7 @@ class DefaultController
     public function indexAction(Request $request, Application $app)
     {
         // Age
-        $age = date('Y', time() - strtotime('1987-04-01')) - 1970;
+        $age = (new DateTime('1987-04-01'))->diff(new DateTime())->y;
 
         // Template
         return $app['twig']->render('homepage.html', array(
